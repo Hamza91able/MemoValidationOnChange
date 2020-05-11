@@ -1,3 +1,8 @@
+        // User will enter the message in this field. However donot change anything for FormInput. (Line no. 32 below)
+        // It is a common component in our Project and should not be touched. 
+        // Ensure onChange is handled and validation is taken care of without touching FormInput component shown below.
+        // I will also attach the FormInput file to this project just for reference.
+
 import React from 'react'
 import PropTypes from 'prop-types'
 
@@ -23,12 +28,7 @@ const Memo = ({ fieldId, defaultMemo, memo, isConfirm, getString }) => {
             <Translatable id={memoLabel} />
           </strong>
         </FormFieldLabel>
-        
-        // User will enter the message in this field. However donot change anything for FormInput
-        // It is a common component in our Project and should not be touched. 
-        // Ensure onChange is handled and validation is taken care of without touching FormInput component shown below.
-        // I will also attach the FormInput file to this project just for reference. 
-        
+       
         <FormInput
           className={styles.input}
           initialValue={defaultMemo}
