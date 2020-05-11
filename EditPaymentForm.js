@@ -1,3 +1,9 @@
+          // perform validation when user enters memo field below. As user types, we need to check the length of characters user enters
+          // if length of characters is greater than 32, we need to display a text showing how many characters more user had typed
+          // for e.g. if user enters 40 characters, we need to put a message below stating "you have typed 8 characters more"
+          // Also as user deletes extra characters, the message should update automatically stating 
+          // "you have typed 5 characters more"/ "you have typed 2 characters more". (Memo field in Line no. 154 below)
+
 import React from 'react'
 import PropTypes from 'prop-types'
 import { connect } from 'react-redux'
@@ -144,11 +150,6 @@ class EditPaymentForm extends React.Component {
           </EditPaymentAccount>
           <AmountInput amount={paymentDetails.get('amount')} />
           <EditPaymentSendOnDate payee={editPaymentPayee} sendOnDate={paymentDetails.get('sendOnDate')} />
-          // perform validation when user enters memo field below. As user types, we need to check the length of characters user enters
-          // if length of characters is greater than 32, we need to display a text showing how many characters more user had typed
-          // for e.g. if user enters 40 characters, we need to put a message below stating "you have typed 8 characters more"
-          // Also as user deletes extra characters, the message should update automatically stating 
-          // "you have typed 5 characters more"/ "you have typed 2 characters more"
           
           <Memo fieldId="memo" defaultMemo={paymentDetails.get('memo')} />
           <FormInputHidden fieldId="F" initialValue="J" />
